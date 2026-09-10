@@ -9,7 +9,9 @@
 <body>
     <main class="page-shell detail-page">
         <article class="post-card">
-        <h1><%= post.user %></h1>
+        <a class="back-link" href="/">&larr; Back to feed</a>
+        <p class="eyebrow">Conversation</p>
+        <h1>@<%= post.user %></h1>
         <p><%= post.content %></p>
         <a class="button" href="/">Back to posts</a>
         </article>

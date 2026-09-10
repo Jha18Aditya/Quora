@@ -3,18 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New</title>
+    <title>Create a post | Quora</title>
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <main class="page-shell form-page">
-        <h1>Create post</h1>
+        <a class="back-link" href="/">&larr; Back to feed</a>
+        <p class="eyebrow">Start a conversation</p>
+        <h1>Create a post</h1>
+        <p class="form-intro">Share a question, a useful idea, or something you have been thinking about.</p>
         <form method="post" action="/posts">
             <label for="user">Username</label>
             <input id="user" type="text" name="user" placeholder="Enter your username" required>
             <label for="content">Post</label>
             <textarea id="content" name="content" placeholder="Enter the post" required></textarea>
-            <button class="button button-primary">Submit</button>
+            <button class="button button-primary">Publish post <span aria-hidden="true">&rarr;</span></button>
         </form>
     </main>
 </body>

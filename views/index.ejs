@@ -3,18 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Posts</title>
+    <title>Quora | Community feed</title>
+    <meta name="description" content="A thoughtful community feed for questions, ideas, and useful conversations.">
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <main class="page-shell">
-    <h1>Quora</h1>
-
-    <a class="button button-primary" href="/posts/new">Create post</a>
+    <header class="site-header">
+        <a class="brand" href="/">Quora<span>.</span></a>
+        <a class="button button-primary" href="/posts/new">Create post <span aria-hidden="true">+</span></a>
+    </header>
+    <section class="feed-intro">
+        <p class="eyebrow">Community feed</p>
+        <h1>Ideas worth sharing.</h1>
+        <p class="intro-copy">Ask boldly, answer generously, and leave the feed a little wiser.</p>
+    </section>
+    <div class="feed-label"><span>Latest conversations</span><span><%= posts.length %> posts</span></div>
     <div class="post-list">
         <% for(post of posts){ %>
            <article class="post-card">
-               <h3>@<%= post.user %></h3>
+               <div class="post-author"><span class="avatar"><%= post.user.charAt(0).toUpperCase() %></span><h3>@<%= post.user %></h3></div>
                <p><%= post.content %></p>
                <div class="post-actions">
                <a class="button" href="/posts/<%= post.id %>">See detail</a>
